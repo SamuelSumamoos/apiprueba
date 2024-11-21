@@ -1,0 +1,76 @@
+#%RAML 1.0
+title: apiprueba
+version: v1
+baseUri: http://localhost:3000/{version}
+
+types:
+  Resource:
+    type: object
+    properties:
+      id: integer
+      name: string
+      description: string
+      createdAt: datetime
+
+/resources:
+  description: Main resource endpoint
+  get:
+    description: Retrieve all resources
+    responses:
+      200:
+        body:
+          application/json:
+            type: Resource[]
+  /{id}:
+    uriParameters:
+      id:
+        type: integer
+        required: true
+    get:
+      description: Retrieve a resource by its ID
+      responses:
+        200:
+          body:
+            application/json:
+              type: Resource
+        404:
+          description: Resource not found
+    /details:
+      get:
+        description: Retrieve detailed information about a resource
+        responses:
+          200:
+            body:
+              application/json:
+                properties:
+                  id: integer
+                  name: string
+                  details: string
+                  metadata: object
+  /search:
+    get:
+      description: Search resources by query parameters
+      queryParameters:
+        q:
+          description: Search query
+          type: string
+          required: true
+      responses:
+        200:
+          body:
+            application/json:
+              type: Resource[]
+/create:
+  post:
+    description: Create a new resource
+    body:
+      application/json:
+        type: Resource
+    responses:
+      201:
+        description: Resource created successfully
+        body:
+          application/json:
+            properties:
+              message: string
+              resourceId: integer

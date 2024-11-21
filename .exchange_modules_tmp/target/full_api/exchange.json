@@ -1,0 +1,11 @@
+{
+  "version": "1.0.1",
+  "apiVersion": "v1",
+  "descriptorVersion": "1.0.0",
+  "classifier": "raml",
+  "main": "apiprueba.raml",
+  "assetId": "apiprueba",
+  "groupId": "b793ba05-0a28-417f-b159-b24ff3b7f4fa",
+  "organizationId": "b793ba05-0a28-417f-b159-b24ff3b7f4fa",
+  "name": "apiprueba"
+}

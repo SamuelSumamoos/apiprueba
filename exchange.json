@@ -1,10 +1,11 @@
 {
-  "main": "apiprueba.raml",
-  "name": "apiprueba",
-  "groupId": "f7718d1a-25aa-4ee2-9949-f11dc0cc1527",
-  "assetId": "apiprueba",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "apiVersion": "v1",
+  "descriptorVersion": "1.0.0",
   "classifier": "raml",
-  "tags": [],
-  "descriptorVersion": "1.0.0"
+  "main": "apiprueba.raml",
+  "assetId": "apiprueba",
+  "groupId": "b793ba05-0a28-417f-b159-b24ff3b7f4fa",
+  "organizationId": "b793ba05-0a28-417f-b159-b24ff3b7f4fa",
+  "name": "apiprueba"
 }
